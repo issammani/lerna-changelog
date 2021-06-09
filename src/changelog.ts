@@ -120,6 +120,8 @@ export default class Changelog {
   }
 
   private toCommitInfos(commits: Git.CommitListItem[]): CommitInfo[] {
+        console.log("----------", commits, "************");
+
     return commits.map(commit => {
       const { sha, refName, summary: message, date } = commit;
 
